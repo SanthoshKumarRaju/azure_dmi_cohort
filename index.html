@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Deployment Projects Blog</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Azure Cloud Projects Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/buttons.css">
+    <link rel="stylesheet" href="styles/components/cards.css">
+    <link rel="stylesheet" href="styles/pages/home.css">
+    <link rel="stylesheet" href="styles/pages/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- Navigation Header -->
+    <header class="main-header">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
@@ -18,18 +23,10 @@
                     <span>Azure Projects</span>
                 </div>
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -41,253 +38,178 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Azure Cloud Deployment Projects</h1>
-            <p class="hero-subtitle">A collection of hands-on Azure implementations showcasing infrastructure, networking, and application deployment</p>
-            <a href="#projects" class="cta-button">Explore Projects</a>
-        </div>
-        <div class="hero-background">
-            <div class="cloud-animation">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Azure Cloud Deployment Portfolio</h1>
+                <p class="hero-subtitle">Hands-on implementations showcasing infrastructure, networking, and application deployment on Microsoft Azure</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Azure Services</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Architecture Levels</span>
+                    </div>
+                </div>
+                <a href="#projects" class="cta-button primary">
+                    <span>Explore Projects</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+            <div class="hero-visual">
+                <div class="cloud-architecture">
+                    <div class="cloud-layer web-layer">
+                        <i class="fas fa-globe"></i>
+                        <span>Web Tier</span>
+                    </div>
+                    <div class="cloud-layer app-layer">
+                        <i class="fas fa-server"></i>
+                        <span>App Tier</span>
+                    </div>
+                    <div class="cloud-layer db-layer">
+                        <i class="fas fa-database"></i>
+                        <span>Database Tier</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects Grid Section -->
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Azure Projects</h2>
-            <p class="section-subtitle">Hands-on implementations of various Azure services and architectures</p>
+            <h2 class="section-title">Azure Implementation Projects</h2>
+            <p class="section-subtitle">From basic account setup to complex multi-tier architectures</p>
             
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">1. Create and Set Up Your Azure Free Account</h3>
-                    <span class="project-badge">Beginner</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-description">
-                        <p>Getting started with Azure by creating a free account and exploring the Azure portal interface. The Azure free account provides access to popular Azure products for 12 months, a credit to use for the first 30 days, and access to more than 25 products that are always free.</p>
-                        <div class="project-steps">
-                            <h4>Steps Completed:</h4>
-                            <ul>
-                                <li>Created Azure Free Account</li>
-                                <li>Explored Azure Portal Interface</li>
-                                <li>Verified Subscription and Service Limits</li>
-                                <li>Set Up Billing Alerts</li>
-                            </ul>
+            <div class="projects-grid">
+                <!-- Project 1 Card -->
+                <div class="project-card" data-difficulty="beginner">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-user-plus"></i>
                         </div>
+                        <span class="difficulty-badge beginner">Beginner</span>
                     </div>
-                    <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-cloud"></i>
-                            <p>Azure Account Setup</p>
-                        </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Azure Free Account Setup</h3>
+                        <p class="card-description">Create and configure your Azure free account with $200 credit and access to popular services.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Account Creation</li>
+                            <li><i class="fas fa-check"></i> Subscription Setup</li>
+                            <li><i class="fas fa-check"></i> Service Limits</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="pages/azure-account.html" class="card-button">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">2. Deploy a React Application on an Azure Virtual Machine</h3>
-                    <span class="project-badge">Intermediate</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-description">
-                        <p>Deployed a React application on an Ubuntu VM using Nginx as a web server. This project demonstrates infrastructure provisioning, application deployment, and web server configuration on Azure.</p>
-                        <div class="project-steps">
-                            <h4>Implementation Steps:</h4>
-                            <ol>
-                                <li>Created Resource Group: <code>react-app-rg</code></li>
-                                <li>Provisioned Ubuntu 20.04 LTS VM (B1s size)</li>
-                                <li>Configured inbound ports for SSH (22) and HTTP (80)</li>
-                                <li>Installed Node.js and npm</li>
-                                <li>Cloned and built React application from GitHub</li>
-                                <li>Configured Nginx for static hosting</li>
-                                <li>Tested the deployment</li>
-                            </ol>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure VM</span>
-                            <span class="tech-tag">Ubuntu</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Nginx</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-placeholder">
+                <!-- Project 2 Card -->
+                <div class="project-card" data-difficulty="intermediate">
+                    <div class="card-header">
+                        <div class="card-icon">
                             <i class="fab fa-react"></i>
-                            <p>React App on Azure VM</p>
                         </div>
+                        <span class="difficulty-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">React App on Azure VM</h3>
+                        <p class="card-description">Deploy a React application on Ubuntu VM with Nginx web server configuration.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Ubuntu VM Setup</li>
+                            <li><i class="fas fa-check"></i> Node.js & Nginx</li>
+                            <li><i class="fas fa-check"></i> React Build & Deploy</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="pages/react-app-deployment.html" class="card-button">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-video">
-                    <h4>Demo Video:</h4>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/Azure-react-app-deploy.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">3. Design a Three-Tier Network with Load Balancer on Azure</h3>
-                    <span class="project-badge">Advanced</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-description">
-                        <p>Implemented a secure three-tier network architecture with web, application, and database tiers separated by subnets and protected by network security groups. Added a public load balancer for high availability.</p>
-                        <div class="project-steps">
-                            <h4>Architecture Components:</h4>
-                            <ul>
-                                <li><strong>Resource Group:</strong> vnet-demo-rg</li>
-                                <li><strong>Virtual Network:</strong> eb-demo-vnet (10.0.0.0/16)</li>
-                                <li><strong>Subnets:</strong>
-                                    <ul>
-                                        <li>web-subnet (10.0.1.0/24)</li>
-                                        <li>app-subnet (10.0.2.0/25)</li>
-                                        <li>db-subnet (10.0.3.0/26)</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Web Tier VM:</strong> web-nginx (Ubuntu 22.04)</li>
-                                <li><strong>Load Balancer:</strong> web-public-elb (Standard SKU)</li>
-                                <li><strong>Health Probe & Load Balancing Rules</strong></li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure VNet</span>
-                            <span class="tech-tag">Load Balancer</span>
-                            <span class="tech-tag">NSG</span>
-                            <span class="tech-tag">Subnetting</span>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-placeholder">
+                <!-- Project 3 Card -->
+                <div class="project-card" data-difficulty="advanced">
+                    <div class="card-header">
+                        <div class="card-icon">
                             <i class="fas fa-network-wired"></i>
-                            <p>Three-Tier Architecture</p>
                         </div>
+                        <span class="difficulty-badge advanced">Advanced</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Three-Tier Network Architecture</h3>
+                        <p class="card-description">Design secure network with load balancer, subnets, and network security groups.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> VNet & Subnets</li>
+                            <li><i class="fas fa-check"></i> Load Balancer</li>
+                            <li><i class="fas fa-check"></i> Network Security</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="pages/three-tier-network.html" class="card-button">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-video">
-                    <h4>Demo Video:</h4>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/Design-a-Three-Tier-Network-with-Load-Balancer-on-Azure.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">4. Host a Static Website on Azure Storage</h3>
-                    <span class="project-badge">Intermediate</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-description">
-                        <p>Deployed a cost-effective static website using Azure Blob Storage static website hosting feature. This approach eliminates the need for web servers and provides high availability at a lower cost.</p>
-                        <div class="project-steps">
-                            <h4>Implementation Steps:</h4>
-                            <ol>
-                                <li>Created Resource Group: <code>static-web-hosting</code></li>
-                                <li>Cloned and customized the website repository</li>
-                                <li>Created Azure Storage account with static website hosting enabled</li>
-                                <li>Uploaded all website files to the storage container</li>
-                                <li>Accessed the website via the static website URL</li>
-                            </ol>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure Storage</span>
-                            <span class="tech-tag">Static Website</span>
-                            <span class="tech-tag">Blob Storage</span>
-                            <span class="tech-tag">Cost Optimization</span>
-                        </div>
-                        <div class="project-link">
-                            <strong>Website URL:</strong> 
-                            <a href="https://staticwebhosting1.z29.web.core.windows.net/" target="_blank">https://staticwebhosting1.z29.web.core.windows.net/</a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-placeholder">
+                <!-- Project 4 Card -->
+                <div class="project-card" data-difficulty="intermediate">
+                    <div class="card-header">
+                        <div class="card-icon">
                             <i class="fas fa-file-code"></i>
-                            <p>Static Website</p>
                         </div>
+                        <span class="difficulty-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Static Website on Azure Storage</h3>
+                        <p class="card-description">Host cost-effective static websites using Azure Blob Storage with custom domain.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Blob Storage</li>
+                            <li><i class="fas fa-check"></i> Static Website Hosting</li>
+                            <li><i class="fas fa-check"></i> Custom Domain</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="pages/static-website.html" class="card-button">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-video">
-                    <h4>Demo Video:</h4>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/Static-Website-on-Azure.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 5 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">5. Deploy EpicBook on Azure VM + Azure Database for MySQL</h3>
-                    <span class="project-badge">Advanced</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-description">
-                        <p>Deployed a full-stack application (EpicBook) with a web frontend on an Azure VM and database backend on Azure Database for MySQL Flexible Server with private network integration.</p>
-                        <div class="project-steps">
-                            <h4>Architecture Details:</h4>
-                            <ul>
-                                <li><strong>Resource Group:</strong> EpicBook-RG</li>
-                                <li><strong>Virtual Network:</strong> epic-vnet (10.0.0.0/16)</li>
-                                <li><strong>Subnets:</strong>
-                                    <ul>
-                                        <li>public-subnet (10.0.1.0/24) - for VM</li>
-                                        <li>mysql-subnet (10.0.2.0/24) - for MySQL</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Web VM:</strong> epicbook-vm (Ubuntu 22.04)</li>
-                                <li><strong>Database:</strong> Azure MySQL Flexible Server (Private access)</li>
-                                <li><strong>Network Security Groups</strong> for traffic control</li>
-                                <li><strong>Nginx</strong> as reverse proxy</li>
-                            </ul>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Azure VM</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">VNet Integration</span>
-                            <span class="tech-tag">Nginx</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                        <div class="project-link">
-                            <strong>Application URL:</strong> 
-                            <a href="http://20.244.0.224/" target="_blank">http://20.244.0.224/</a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-placeholder">
+                <!-- Project 5 Card -->
+                <div class="project-card" data-difficulty="advanced">
+                    <div class="card-header">
+                        <div class="card-icon">
                             <i class="fas fa-book"></i>
-                            <p>EpicBook Application</p>
                         </div>
+                        <span class="difficulty-badge advanced">Advanced</span>
                     </div>
-                </div>
-                <div class="project-video">
-                    <h4>Demo Video:</h4>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/EpicBook_Azure&Azure_Database.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="card-content">
+                        <h3 class="card-title">EpicBook Full-Stack Deployment</h3>
+                        <p class="card-description">Full-stack application with Azure VM frontend and MySQL database backend.</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Azure VM & MySQL</li>
+                            <li><i class="fas fa-check"></i> VNet Integration</li>
+                            <li><i class="fas fa-check"></i> Nginx Reverse Proxy</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="pages/epicbook-deployment.html" class="card-button">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -295,48 +217,41 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About This Project</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>This blog documents a comprehensive journey through various Azure services and deployment methodologies. From simple static website hosting to complex three-tier architectures, these projects demonstrate practical implementation of cloud infrastructure concepts.</p>
-                    <p>Each project was designed to highlight different aspects of Azure capabilities while following cloud best practices for security, scalability, and cost optimization.</p>
-                    <div class="skills">
-                        <h3>Technologies & Services Used:</h3>
+                    <h2 class="section-title">About This Portfolio</h2>
+                    <p>This portfolio showcases practical implementations of various Azure services, demonstrating cloud infrastructure design, deployment, and management skills.</p>
+                    <p>Each project follows cloud best practices for security, scalability, and cost optimization while solving real-world deployment scenarios.</p>
+                    
+                    <div class="skills-overview">
+                        <h3>Technologies Mastered</h3>
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h4>Compute</h4>
-                                <ul>
-                                    <li>Azure Virtual Machines</li>
-                                    <li>Ubuntu Linux</li>
-                                    <li>Node.js Runtime</li>
-                                </ul>
+                                <h4>Compute Services</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Azure Virtual Machines</span>
+                                    <span class="skill-tag">Ubuntu Linux</span>
+                                    <span class="skill-tag">App Services</span>
+                                </div>
                             </div>
                             <div class="skill-category">
                                 <h4>Networking</h4>
-                                <ul>
-                                    <li>Azure Virtual Network (VNet)</li>
-                                    <li>Load Balancer</li>
-                                    <li>Network Security Groups</li>
-                                    <li>Subnet Architecture</li>
-                                </ul>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Virtual Network</span>
+                                    <span class="skill-tag">Load Balancer</span>
+                                    <span class="skill-tag">Network Security Groups</span>
+                                    <span class="skill-tag">Subnet Architecture</span>
+                                </div>
                             </div>
                             <div class="skill-category">
                                 <h4>Storage & Database</h4>
-                                <ul>
-                                    <li>Azure Storage Accounts</li>
-                                    <li>Azure Database for MySQL</li>
-                                    <li>Blob Storage</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Web Technologies</h4>
-                                <ul>
-                                    <li>React.js</li>
-                                    <li>Nginx Web Server</li>
-                                    <li>Static Website Hosting</li>
-                                </ul>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Azure Storage</span>
+                                    <span class="skill-tag">MySQL Database</span>
+                                    <span class="skill-tag">Blob Storage</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -346,24 +261,30 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p>If you're interested in Azure cloud technologies or have questions about these implementations, feel free to reach out!</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>pravinmishraaws@gmail.com</span>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>pravinmishraaws@gmail.com</p>
                         </div>
-                        <div class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/pravinmishraaws</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/pravinmishraaws</p>
                         </div>
-                        <div class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/pravinmishra</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/pravinmishra</p>
                         </div>
                     </div>
                 </div>
@@ -372,20 +293,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 Azure Deployment Projects. All rights reserved.</p>
+                <div class="footer-logo">
+                    <i class="fab fa-microsoft"></i>
+                    <span>Azure Projects</span>
+                </div>
+                <p class="footer-text">Hands-on Azure implementations showcasing cloud infrastructure expertise</p>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#projects">Projects</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
+                <p class="footer-copyright">&copy; 2023 Azure Deployment Projects. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/components/navigation.js"></script>
+    <script src="scripts/components/animations.js"></script>
 </body>
 </html>
